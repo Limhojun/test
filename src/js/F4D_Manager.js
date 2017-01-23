@@ -1,5 +1,6 @@
 // real time radiosity shader http://madebyevan.com/webgl-path-tracing/
 //http://webglfundamentals.org/webgl/lessons/webgl-fundamentals.html // GOOD TUTORIALS !!!!!!!!!!!!!!!!!!!!!!!!!!!
+<<<<<<< HEAD
 /**
  * 어떤 일을 하고 있습니까?
  * @param gl = 변수
@@ -105,34 +106,6 @@ function genNoiseTextureRGBA(gl, w, h, pixels) {
 		pixels[i] = 28; i++;
   }
   else
-	 
-  {
-	  for(var y=0; y<h; y++) {
-		for(var x=0; x<w; x++) {
-		  pixels[(y*w + x)*4+0] = Math.floor(255 * Math.random());
-		  pixels[(y*w + x)*4+1] = Math.floor(255 * Math.random());
-		  pixels[(y*w + x)*4+2] = Math.floor(255 * Math.random());
-		  pixels[(y*w + x)*4+3] = Math.floor(255 * Math.random());
-		}
-	  } 
-  }
-  gl.texImage2D(
-    gl.TEXTURE_2D, 0, gl.RGBA, w, h, 0, gl.RGBA, gl.UNSIGNED_BYTE, pixels
-  );
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);   
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.REPEAT);
-  gl.bindTexture(gl.TEXTURE_2D, null);  
-  
-  texture.width = w;
-  texture.height = h; 
-  return texture;
-}
-
-/**
- * 어떤 일을 하고 있습니까?
- */
 var f4d_manager = function() {
 	// F4D Data structure & objects.*****************************************
 	this.f4dBR_buildingProjectsList = new f4d_BR_buildingProjectsList(); // Old. Provisionally for f4d projects.*** !!!
